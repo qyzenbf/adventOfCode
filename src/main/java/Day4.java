@@ -21,7 +21,7 @@ public class Day4 {
                 Pattern r = Pattern.compile(PATTERN);
                 Matcher m = r.matcher(line);
                 if (m.find()) {
-                    // Dashes not necessary
+
                     String name = m.group("name").replace("-", "");
                     String sector = m.group("sector");
                     String checksum = m.group("checksum").replace("[", "").replace("]", "");
