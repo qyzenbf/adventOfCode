@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Day1 {
-    public static String INPUT_FILE = "/Users/QYZ/Desktop/adventOfCode/src/main/InputFile/Input_D1";
+    public static String INPUT_FILE = "src/main/InputFile/Input_D1";
     private static String NORTH = "NORTH";
     private static String SOUTH = "SOUTH";
     private static String EAST = "EAST";

@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 
 
 public class Day10 {
-    public static String INPUT_FILE = "/Users/QYZ/Desktop/adventOfCode/src/main/InputFile/Input_D10";
+    public static String INPUT_FILE = "src/main/InputFile/Input_D10";
     public static String VALUE_PATTERN = "value (\\d+) goes to bot (\\d+)";
     public static String INSTRUCTION_PATTERN = "bot (?<bot>\\d+) gives low to (bot (?<lowToBot>\\d+)|output (?<lowToOutput>\\d+)) and high to (bot (?<highToBot>\\d+)|output (?<highToOutput>\\d+))";
 

@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Day4 {
-    public static String INPUT_FILE = "/Users/QYZ/Desktop/adventOfCode/src/main/InputFile/Input_D4";
+    public static String INPUT_FILE = "src/main/InputFile/Input_D4";
     private static String PATTERN = "(?<name>[\\D-]+)(?<sector>\\d+)(?<checksum>[\\[\\w\\]]+)";
 
     public static void main(String[] args) throws FileNotFoundException {

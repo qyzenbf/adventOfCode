@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.Assert.*;
+
 
 public class Day1Test {
 
