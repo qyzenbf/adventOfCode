@@ -14,8 +14,8 @@ import java.util.regex.Pattern;
 
 public class Day10 {
     public static String INPUT_FILE = "src/main/InputFile/Input_D10";
-    public static String VALUE_PATTERN = "value (\\d+) goes to bot (\\d+)";
-    public static String INSTRUCTION_PATTERN = "bot (?<bot>\\d+) gives low to (bot (?<lowToBot>\\d+)|output (?<lowToOutput>\\d+)) and high to (bot (?<highToBot>\\d+)|output (?<highToOutput>\\d+))";
+    //public static String VALUE_PATTERN = "value (\\d+) goes to bot (\\d+)";
+    //public static String INSTRUCTION_PATTERN = "bot (?<bot>\\d+) gives low to (bot (?<lowToBot>\\d+)|output (?<lowToOutput>\\d+)) and high to (bot (?<highToBot>\\d+)|output (?<highToOutput>\\d+))";
 
     public static int VAL_LOW = 17;
     public static int VAL_HIGH = 61;
@@ -34,17 +34,19 @@ public class Day10 {
             while ((line = br.readLine()) != null) {
 
                 if (line.contains("value")) {
-                    Pattern p = Pattern.compile(VALUE_PATTERN);
-                    Matcher m = p.matcher(line);
+                    //Pattern p = Pattern.compile(VALUE_PATTERN);
+                    //Matcher m = p.matcher(line);
 
                     //chipValue: m.group(1); botValue: m.group(2);
-                    if (m.find()) saveChipToBot(bots, Integer.valueOf(m.group(1)), Integer.valueOf(m.group(2)));
+                    String[] arr = line.split(" ");
+                    saveChipToBot(bots, Integer.valueOf(arr[1]), Integer.valueOf(arr[5]));
                 }
 
                 if (line.contains("gives")) {
-                    Pattern p = Pattern.compile(INSTRUCTION_PATTERN);
-                    Matcher m = p.matcher(line);
-                    if (m.find()) saveInstructionToBot(bots, line, Integer.valueOf(m.group("bot")));
+                    //Pattern p = Pattern.compile(INSTRUCTION_PATTERN);
+                    //Matcher m = p.matcher(line);
+                    String[] arr = line.split(" ");
+                    saveInstructionToBot(bots, line, Integer.valueOf(arr[1]));
                 }
             }
 
@@ -70,34 +72,33 @@ public class Day10 {
     /* process instruction, give away chips to other bots or outputs */
     public static void processInstruction(Map<Integer, Bot> bots, Map<Integer, Integer> outputs, Bot bot) {
 
-        Pattern p = Pattern.compile(INSTRUCTION_PATTERN);
-        Matcher m = p.matcher(bot.getInstruction());
+        //Pattern p = Pattern.compile(INSTRUCTION_PATTERN);
+        //Matcher m = p.matcher(bot.getInstruction());
 
-        if (m.find()) {
-            if (m.group("lowToBot") != null && !m.group("lowToBot").isEmpty()) {
-                int lowBotTargetId = Integer.valueOf(m.group("lowToBot"));
-                giveChipToBot(lowBotTargetId, bot.getLow(), bots, outputs);
-                bot.setLow(0);
-            }
+        String[] arr = bot.getInstruction().split(" ");
 
-            if (m.group("lowToOutput") != null && !m.group("lowToOutput").isEmpty()) {
-                int lowOutputTargetId = Integer.valueOf(m.group("lowToOutput"));
-                outputs.put(lowOutputTargetId, bot.getLow());
-                bot.setLow(0);
-            }
+        if (arr[5].equals("bot")) {
+            int lowBotTargetId = Integer.valueOf(arr[6]);
+            giveChipToBot(lowBotTargetId, bot.getLow(), bots, outputs);
+            bot.setLow(0);
+        }
 
-            if (m.group("highToBot") != null && !m.group("highToBot").isEmpty()) {
-                int highBotTargetId = Integer.valueOf(m.group("highToBot"));
-                giveChipToBot(highBotTargetId, bot.getHigh(), bots, outputs);
-                bot.setHigh(0);
-            }
+        if (arr[5].equals("output")) {
+            int lowOutputTargetId = Integer.valueOf(arr[6]);
+            outputs.put(lowOutputTargetId, bot.getLow());
+            bot.setLow(0);
+        }
 
-            if (m.group("highToOutput") != null && !m.group("highToOutput").isEmpty()) {
-                int highOutputTargetId = Integer.valueOf(m.group("highToOutput"));
-                outputs.put(highOutputTargetId, bot.getHigh());
-                bot.setHigh(0);
-            }
+        if (arr[10].equals("bot")) {
+            int highBotTargetId = Integer.valueOf(arr[11]);
+            giveChipToBot(highBotTargetId, bot.getHigh(), bots, outputs);
+            bot.setHigh(0);
+        }
 
+        if (arr[10].equals("output")) {
+            int highOutputTargetId = Integer.valueOf(arr[11]);
+            outputs.put(highOutputTargetId, bot.getHigh());
+            bot.setHigh(0);
         }
 
     }
