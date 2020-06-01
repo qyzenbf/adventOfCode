@@ -44,6 +44,7 @@ public class Day4 {
         System.out.println("Section ID where North Pole objects stored: " + northPoleId);
     }
 
+    /* Decrypted name of each input, find the north pole object */
     public static int checkNorthPole(String name, String sector) {
         StringBuilder decryptedName = new StringBuilder(name);
         int northPoleId = 0;
@@ -71,6 +72,7 @@ public class Day4 {
     }
 
 
+    /* store each character of name into a HashMap */
     public static void storeLetter(String name, HashMap<String, Integer> letters) {
         for (int i = 0; i < name.length(); i++) {
             String character = String.valueOf(name.charAt(i));
@@ -83,6 +85,7 @@ public class Day4 {
         }
     }
 
+    /* find the most common 5 letters in the name, sort by frequency of occurrence, with ties broken by alphabetization */
     public static String commonLetters(Map<String, Integer> letters) {
 
         Map<String, Integer> sorted = sortByValue(letters);
@@ -95,7 +98,7 @@ public class Day4 {
         return commonLetters.toString().substring(0, 5);
     }
 
-    // sort DES by value and key
+    /* sort in DESCENDING, by value and then by key */
     public static <K extends Comparable<? super K>, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map) {
 
         List<Map.Entry<K, V>> list = new LinkedList<Map.Entry<K, V>>(map.entrySet());

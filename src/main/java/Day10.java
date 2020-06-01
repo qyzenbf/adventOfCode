@@ -57,6 +57,7 @@ public class Day10 {
         System.out.println("Multiplied value: " + outputs.get(0) * outputs.get(1) * outputs.get(2));
     }
 
+    /* continuously find the executable bot until none is left */
     public static void startProcess(Map<Integer, Bot> bots, Map<Integer, Integer> outputs) {
         while (getInitialBot(bots) != null) {
             Bot bot = getInitialBot(bots);
@@ -66,6 +67,7 @@ public class Day10 {
         }
     }
 
+    /* process instruction, give away chips to other bots or outputs */
     public static void processInstruction(Map<Integer, Bot> bots, Map<Integer, Integer> outputs, Bot bot) {
 
         Pattern p = Pattern.compile(INSTRUCTION_PATTERN);
@@ -100,6 +102,7 @@ public class Day10 {
 
     }
 
+    /* get a bot which has both value and able to start implement the instruction */
     public static Bot getInitialBot(Map<Integer, Bot> bots) {
         int initialBot;
         for (Map.Entry<Integer, Bot> bot : bots.entrySet()) {
@@ -112,6 +115,7 @@ public class Day10 {
 
     }
 
+    /* save instruction to bot */
     public static void saveInstructionToBot(Map<Integer, Bot> bots, String line, int botValue) {
         Bot bot = bots.get(botValue);
         if (bot != null) {
@@ -123,6 +127,7 @@ public class Day10 {
         }
     }
 
+    /* give a specific-valued chip to bot */
     public static void saveChipToBot(Map<Integer, Bot> bots, int chipValue, int botValue) {
         Bot bot = bots.get(botValue);
         if (bot != null) {
@@ -134,20 +139,20 @@ public class Day10 {
         }
     }
 
-    public static void giveChipToBot(int receiverBotId, int value, Map<Integer, Bot> botMap, Map<Integer, Integer> outputs) {
-
-        // Insert value on bot map
-        Bot bot = botMap.get(receiverBotId);
+    /* give chip to a certain bot and check the ability of the receiver bot */
+    public static void giveChipToBot(int receiverBotId, int value, Map<Integer, Bot> map, Map<Integer, Integer> outputs) {
+        // Insert value into bot on HashMap
+        Bot bot = map.get(receiverBotId);
         if (bot != null) {
             bot.receiveChip(value);
-            // Check if values are what we are looking for. If true print.
+            // Check if values are what we are looking for. If true mark the bot ID.
             if (bot.getLow() == VAL_LOW && bot.getHigh() == VAL_HIGH) {
                 THE_BOT_ID = receiverBotId;
             }
 
-            // If has both values -> read instruction and call recursively else return
+            // If has both values, and also has instruction, read instruction and call recursively
             if (bot.getInstruction() != null && bot.getLow() > 0 && bot.getHigh() > 0) {
-                processInstruction(botMap, outputs, bot);
+                processInstruction(map, outputs, bot);
             }
         }
 
@@ -155,6 +160,7 @@ public class Day10 {
 
 }
 
+/* Bot Object, with low-value chip, high-value chip and instruction */
 @Getter
 @Setter
 class Bot {

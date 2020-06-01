@@ -27,11 +27,9 @@ public class Day1 {
         for (String instruction : instructions) {
             int stepNum = Integer.parseInt(instruction.substring(1));
             if (instruction.contains("L")) {
-                //stepNum = Integer.parseInt(instruction.substring(instruction.indexOf("L") + 1));
                 currentPoint = move("L", stepNum, currentPoint, currentFace);
                 currentFace = updateFace("L", currentFace);
             } else if (instruction.contains("R")) {
-                //stepNum = Integer.parseInt(instruction.substring(instruction.indexOf("R") + 1));
                 currentPoint = move("R", stepNum, currentPoint, currentFace);
                 currentFace = updateFace("R", currentFace);
             }
@@ -45,6 +43,7 @@ public class Day1 {
         return Math.abs(current.y - initial.y) + Math.abs(current.x - initial.x);
     }
 
+    /*Convert file into list of instruction*/
     public static ArrayList<String> readFile(ArrayList<String> instructions) throws Exception {
         BufferedReader br = new BufferedReader(new FileReader(INPUT_FILE));
         String input;
@@ -84,6 +83,7 @@ public class Day1 {
         return null;
     }
 
+    /*update current point*/
     public static Point move(String direction, int stepNum, Point currentPoint, String currentFace) {
         int moveX = 0;
         int moveY = 0;
@@ -115,6 +115,7 @@ public class Day1 {
         return currentPoint;
     }
 
+    /*return whether a point is visited or not*/
     public static boolean isVisited(Point currentPoint, List<Point> visitedPoints) {
         for (Point visited : visitedPoints) {
             if (visited.x == currentPoint.x && visited.y == currentPoint.y) {
@@ -124,6 +125,7 @@ public class Day1 {
         return false;
     }
 
+    /*add visited points to list when doing a movement*/
     public static void addVisited(Point currentPoint, int moveX, int moveY) {
 
         int currentX = currentPoint.x;
