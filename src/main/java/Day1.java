@@ -13,16 +13,16 @@ public class Day1 {
     private static String SOUTH = "SOUTH";
     private static String EAST = "EAST";
     private static String WEST = "WEST";
-    public static List<Point> visitedPoints = new ArrayList<Point>();
+    public static List<Point> visitedPoints = new ArrayList<>();
     public static Point visitedTwice = null;
 
     public static void main(String[] args) throws Exception {
-        List<String> instructions = new ArrayList<String>();
+        List<String> instructions ;
         String currentFace = NORTH;
         Point initialPoint = new Point(0, 0);
         Point currentPoint = new Point(0, 0);
 
-        instructions = readFile(new ArrayList<String>());
+        instructions = readFile(new ArrayList<>());
 
         for (String instruction : instructions) {
             int stepNum = Integer.parseInt(instruction.substring(1));
