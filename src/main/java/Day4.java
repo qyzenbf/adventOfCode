@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 
 public class Day4 {
     public static String INPUT_FILE = "src/main/InputFile/Input_D4";
-    private static String PATTERN = "(?<name>[\\D-]+)(?<sector>\\d+)(?<checksum>[\\[\\w\\]]+)";
 
     public static void main(String[] args) throws FileNotFoundException {
         int roomsIdSum = 0;
@@ -16,24 +15,25 @@ public class Day4 {
 
         BufferedReader br = new BufferedReader(new FileReader(INPUT_FILE));
         String line;
+
         try {
             while ((line = br.readLine()) != null) {
-                Pattern r = Pattern.compile(PATTERN);
-                Matcher m = r.matcher(line);
-                if (m.find()) {
 
-                    String name = m.group("name").replace("-", "");
-                    String sector = m.group("sector");
-                    String checksum = m.group("checksum").replace("[", "").replace("]", "");
+                String[] arr = line.split("-");
+                String name = "";
+                for (int i = 0; i < arr.length - 1; i++) {
+                    name += arr[i];
+                }
+                String sector = arr[arr.length - 1].substring(0, arr[arr.length - 1].indexOf("["));
+                String checksum = arr[arr.length - 1].substring(arr[arr.length - 1].indexOf("[")).replace("[", "").replace("]", "");
 
-                    HashMap<String, Integer> letters = new HashMap<>();
-                    storeLetter(name, letters);
-                    String commonLetters = commonLetters(letters);
+                HashMap<String, Integer> letters = new HashMap<>();
+                storeLetter(name, letters);
+                String commonLetters = commonLetters(letters);
 
-                    if (commonLetters.equals(checksum)) {
-                        roomsIdSum = roomsIdSum + Integer.parseInt(sector);
-                        northPoleId = northPoleId == 0 ? checkNorthPole(name, sector) : northPoleId;
-                    }
+                if (commonLetters.equals(checksum)) {
+                    roomsIdSum = roomsIdSum + Integer.parseInt(sector);
+                    northPoleId = northPoleId == 0 ? checkNorthPole(name, sector) : northPoleId;
                 }
             }
         } catch (IOException e) {
@@ -46,9 +46,9 @@ public class Day4 {
 
     /* Decrypted name of each input, find the north pole object */
     public static int checkNorthPole(String name, String sector) {
+
         StringBuilder decryptedName = new StringBuilder(name);
         int northPoleId = 0;
-
         int rotation = Integer.parseInt(sector) % 26;
 
         for (int i = 0; i < name.length(); i++) {
@@ -90,11 +90,9 @@ public class Day4 {
 
         Map<String, Integer> sorted = sortByValue(letters);
         StringBuilder commonLetters = new StringBuilder();
-
         for (HashMap.Entry<String, Integer> entry : sorted.entrySet()) {
             commonLetters.append(entry.getKey());
         }
-
         return commonLetters.toString().substring(0, 5);
     }
 
