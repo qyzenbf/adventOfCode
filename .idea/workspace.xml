@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="09203af7-2feb-4cce-86ee-4d256e11f92e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cikoyqrsKNgj1fY2pSdy58FfaT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.scopes" />
+  </component>
+  <component name="RunManager" selected="Application.Day10">
+    <configuration name="Day1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day1" />
+      <module name="adventOfCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day10" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day10" />
+      <module name="adventOfCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day4" />
+      <module name="adventOfCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Day10" />
+        <item itemvalue="Application.Day4" />
+        <item itemvalue="Application.Day1" />
+        <item itemvalue="Application.Day10" />
+        <item itemvalue="Application.Day4" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09203af7-2feb-4cce-86ee-4d256e11f92e" name="Default Changelist" comment="" />
+      <created>1591018980843</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591018980843</updated>
+      <workItem from="1591018988316" duration="819000" />
+      <workItem from="1591019871870" duration="310000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom" timestamp="1591019867386">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1591019867386" />
+    <state width="1324" height="202" key="GridCell.Tab.0.center" timestamp="1591019867383">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1591019867383" />
+    <state width="1324" height="202" key="GridCell.Tab.0.left" timestamp="1591019867382">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1591019867382" />
+    <state width="1324" height="202" key="GridCell.Tab.0.right" timestamp="1591019867384">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1591019867384" />
+    <state x="376" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1591018993393">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="376" y="216" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1591018993393" />
+  </component>
+</project>
