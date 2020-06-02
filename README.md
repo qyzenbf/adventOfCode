@@ -44,7 +44,7 @@ If you have IDE such as `Intellij` or `Eclipse`), you can:
 ```shell script
   cd adventOfCode
   ```
-4. Run the commend below to see the result of test cases: 
+4. Run the commend below to see the overall result of test cases: 
 ```shell script
  mvn clean install
 ```
