@@ -14,9 +14,6 @@ import java.util.regex.Pattern;
 
 public class Day10 {
     public static String INPUT_FILE = "src/main/InputFile/Input_D10";
-    //public static String VALUE_PATTERN = "value (\\d+) goes to bot (\\d+)";
-    //public static String INSTRUCTION_PATTERN = "bot (?<bot>\\d+) gives low to (bot (?<lowToBot>\\d+)|output (?<lowToOutput>\\d+)) and high to (bot (?<highToBot>\\d+)|output (?<highToOutput>\\d+))";
-
     public static int VAL_LOW = 17;
     public static int VAL_HIGH = 61;
     public static int THE_BOT_ID;
@@ -34,17 +31,11 @@ public class Day10 {
             while ((line = br.readLine()) != null) {
 
                 if (line.contains("value")) {
-                    //Pattern p = Pattern.compile(VALUE_PATTERN);
-                    //Matcher m = p.matcher(line);
-
-                    //chipValue: m.group(1); botValue: m.group(2);
                     String[] arr = line.split(" ");
                     saveChipToBot(bots, Integer.valueOf(arr[1]), Integer.valueOf(arr[5]));
                 }
 
                 if (line.contains("gives")) {
-                    //Pattern p = Pattern.compile(INSTRUCTION_PATTERN);
-                    //Matcher m = p.matcher(line);
                     String[] arr = line.split(" ");
                     saveInstructionToBot(bots, line, Integer.valueOf(arr[1]));
                 }
@@ -71,9 +62,6 @@ public class Day10 {
 
     /* process instruction, give away chips to other bots or outputs */
     public static void processInstruction(Map<Integer, Bot> bots, Map<Integer, Integer> outputs, Bot bot) {
-
-        //Pattern p = Pattern.compile(INSTRUCTION_PATTERN);
-        //Matcher m = p.matcher(bot.getInstruction());
 
         String[] arr = bot.getInstruction().split(" ");
 
@@ -113,7 +101,6 @@ public class Day10 {
             }
         }
         return null;
-
     }
 
     /* save instruction to bot */
@@ -156,9 +143,7 @@ public class Day10 {
                 processInstruction(map, outputs, bot);
             }
         }
-
     }
-
 }
 
 /* Bot Object, with low-value chip, high-value chip and instruction */

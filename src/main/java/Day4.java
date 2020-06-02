@@ -28,8 +28,8 @@ public class Day4 {
                 String checksum = arr[arr.length - 1].substring(arr[arr.length - 1].indexOf("[")).replace("[", "").replace("]", "");
 
                 HashMap<String, Integer> letters = new HashMap<>();
-                storeLetter(name, letters);
-                String commonLetters = commonLetters(letters);
+                storeChars(name, letters);
+                String commonLetters = commonChars(letters);
 
                 if (commonLetters.equals(checksum)) {
                     roomsIdSum = roomsIdSum + Integer.parseInt(sector);
@@ -46,7 +46,6 @@ public class Day4 {
 
     /* Decrypted name of each input, find the north pole object */
     public static int checkNorthPole(String name, String sector) {
-
         StringBuilder decryptedName = new StringBuilder(name);
         int northPoleId = 0;
         int rotation = Integer.parseInt(sector) % 26;
@@ -71,25 +70,24 @@ public class Day4 {
         return northPoleId;
     }
 
-
     /* store each character of name into a HashMap */
-    public static void storeLetter(String name, HashMap<String, Integer> letters) {
+    public static void storeChars(String name, HashMap<String, Integer> chars) {
         for (int i = 0; i < name.length(); i++) {
             String character = String.valueOf(name.charAt(i));
-            if (letters.containsKey(character)) {
-                int oldValue = letters.get(character);
-                letters.replace(character, oldValue + 1);
+            if (chars.containsKey(character)) {
+                int oldValue = chars.get(character);
+                chars.replace(character, oldValue + 1);
             } else {
-                letters.put(character, 1);
+                chars.put(character, 1);
             }
         }
     }
 
     /* find the most common 5 letters in the name, sort by frequency of occurrence, with ties broken by alphabetization */
-    public static String commonLetters(Map<String, Integer> letters) {
-
-        Map<String, Integer> sorted = sortByValue(letters);
+    public static String commonChars(Map<String, Integer> chars) {
+        Map<String, Integer> sorted = sortByValue(chars);
         StringBuilder commonLetters = new StringBuilder();
+
         for (HashMap.Entry<String, Integer> entry : sorted.entrySet()) {
             commonLetters.append(entry.getKey());
         }

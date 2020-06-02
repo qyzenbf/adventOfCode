@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="09203af7-2feb-4cce-86ee-4d256e11f92e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Day1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Day1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Day10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Day10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Day4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Day4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Day4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Day4Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Day1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Day1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Day10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Day10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Day4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Day4.class" afterDir="false" />
     </list>
@@ -13,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="114" />
+    <option name="myElementSize" value="128" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -45,14 +49,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
-  <component name="RunManager" selected="Application.Day10">
-    <configuration name="Day1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day1" />
-      <module name="adventOfCode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.Day4Test">
     <configuration name="Day10" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day10" />
       <module name="adventOfCode" />
@@ -63,6 +60,15 @@
     <configuration name="Day4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day4" />
       <module name="adventOfCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day10Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="adventOfCode" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Day10Test" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,11 +93,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Day10" />
-        <item itemvalue="Application.Day4" />
         <item itemvalue="JUnit.Day4Test" />
+        <item itemvalue="Application.Day4" />
+        <item itemvalue="JUnit.Day10Test" />
+        <item itemvalue="Application.Day10" />
         <item itemvalue="JUnit.Day1Test" />
-        <item itemvalue="Application.Day1" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591018980843</updated>
       <workItem from="1591018988316" duration="819000" />
-      <workItem from="1591019871870" duration="11031000" />
+      <workItem from="1591019871870" duration="12565000" />
     </task>
     <servers />
   </component>
@@ -118,22 +124,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="535" y="280" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.768@0.0.1366.768" timestamp="1591023372423" />
-    <state width="1324" height="171" key="GridCell.Tab.0.bottom" timestamp="1591055050678">
+    <state width="1324" height="171" key="GridCell.Tab.0.bottom" timestamp="1591056500613">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1591055050678" />
-    <state width="1324" height="171" key="GridCell.Tab.0.center" timestamp="1591055050676">
+    <state width="1324" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1591056500613" />
+    <state width="1324" height="171" key="GridCell.Tab.0.center" timestamp="1591056500608">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1591055050676" />
-    <state width="1324" height="171" key="GridCell.Tab.0.left" timestamp="1591055050675">
+    <state width="1324" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1591056500608" />
+    <state width="1324" height="171" key="GridCell.Tab.0.left" timestamp="1591056500605">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1591055050675" />
-    <state width="1324" height="171" key="GridCell.Tab.0.right" timestamp="1591055050677">
+    <state width="1324" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1591056500605" />
+    <state width="1324" height="171" key="GridCell.Tab.0.right" timestamp="1591056500612">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1591055050677" />
+    <state width="1324" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1591056500612" />
     <state x="376" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1591018993393">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -142,7 +148,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/adventOfCode$Day1Test.ic" NAME="Day1Test Coverage Results" MODIFIED="1591054106851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/adventOfCode$Day4Test_testSortByValue.ic" NAME="Day4Test.testSortByValue Coverage Results" MODIFIED="1591039707153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/adventOfCode$Day10Test.ic" NAME="Day10Test Coverage Results" MODIFIED="1591039722101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/adventOfCode$Day4Test.ic" NAME="Day4Test Coverage Results" MODIFIED="1591054274454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/adventOfCode$Day10Test.ic" NAME="Day10Test Coverage Results" MODIFIED="1591055495951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/adventOfCode$Day4Test.ic" NAME="Day4Test Coverage Results" MODIFIED="1591056500491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -24,21 +24,21 @@ class Day4Test {
     }
 
     @Test
-    void testCommonLetters() {
+    void testCommonChars() {
         HashMap<String, Integer> map = new HashMap<>();
         map.put("a", 1);
         map.put("b", 1);
         map.put("c", 2);
         map.put("d", 0);
         map.put("e", 1);
-        assertEquals("cabed", Day4.commonLetters(map));
+        assertEquals("cabed", Day4.commonChars(map));
     }
 
     @Test
-    void testStoreLetter() {
+    void testStoreChars() {
         HashMap<String, Integer> map = new HashMap<>();
         String name = "aab";
-        Day4.storeLetter(name, map);
+        Day4.storeChars(name, map);
         assertEquals(1, map.get("b"));
         assertEquals(2, map.get("a"));
     }
