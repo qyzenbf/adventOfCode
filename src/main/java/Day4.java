@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 
 public class Day4 {
     public static String INPUT_FILE = "src/main/InputFile/Input_D4";
-    private static String PATTERN = "(?<name>[\\D-]+)(?<sector>\\d+)(?<checksum>[\\[\\w\\]]+)";
 
     public static void main(String[] args) throws FileNotFoundException {
         int roomsIdSum = 0;
@@ -16,24 +15,25 @@ public class Day4 {
 
         BufferedReader br = new BufferedReader(new FileReader(INPUT_FILE));
         String line;
+
         try {
             while ((line = br.readLine()) != null) {
-                Pattern r = Pattern.compile(PATTERN);
-                Matcher m = r.matcher(line);
-                if (m.find()) {
 
-                    String name = m.group("name").replace("-", "");
-                    String sector = m.group("sector");
-                    String checksum = m.group("checksum").replace("[", "").replace("]", "");
+                String[] arr = line.split("-");
+                String name = "";
+                for (int i = 0; i < arr.length - 1; i++) {
+                    name += arr[i];
+                }
+                String sector = arr[arr.length - 1].substring(0, arr[arr.length - 1].indexOf("["));
+                String checksum = arr[arr.length - 1].substring(arr[arr.length - 1].indexOf("[")).replace("[", "").replace("]", "");
 
-                    HashMap<String, Integer> letters = new HashMap<>();
-                    storeLetter(name, letters);
-                    String commonLetters = commonLetters(letters);
+                HashMap<String, Integer> letters = new HashMap<>();
+                storeChars(name, letters);
+                String commonLetters = commonChars(letters);
 
-                    if (commonLetters.equals(checksum)) {
-                        roomsIdSum = roomsIdSum + Integer.parseInt(sector);
-                        northPoleId = northPoleId == 0 ? checkNorthPole(name, sector) : northPoleId;
-                    }
+                if (commonLetters.equals(checksum)) {
+                    roomsIdSum = roomsIdSum + Integer.parseInt(sector);
+                    northPoleId = northPoleId == 0 ? checkNorthPole(name, sector) : northPoleId;
                 }
             }
         } catch (IOException e) {
@@ -48,7 +48,6 @@ public class Day4 {
     public static int checkNorthPole(String name, String sector) {
         StringBuilder decryptedName = new StringBuilder(name);
         int northPoleId = 0;
-
         int rotation = Integer.parseInt(sector) % 26;
 
         for (int i = 0; i < name.length(); i++) {
@@ -71,30 +70,27 @@ public class Day4 {
         return northPoleId;
     }
 
-
     /* store each character of name into a HashMap */
-    public static void storeLetter(String name, HashMap<String, Integer> letters) {
+    public static void storeChars(String name, HashMap<String, Integer> chars) {
         for (int i = 0; i < name.length(); i++) {
             String character = String.valueOf(name.charAt(i));
-            if (letters.containsKey(character)) {
-                int oldValue = letters.get(character);
-                letters.replace(character, oldValue + 1);
+            if (chars.containsKey(character)) {
+                int oldValue = chars.get(character);
+                chars.replace(character, oldValue + 1);
             } else {
-                letters.put(character, 1);
+                chars.put(character, 1);
             }
         }
     }
 
     /* find the most common 5 letters in the name, sort by frequency of occurrence, with ties broken by alphabetization */
-    public static String commonLetters(Map<String, Integer> letters) {
-
-        Map<String, Integer> sorted = sortByValue(letters);
+    public static String commonChars(Map<String, Integer> chars) {
+        Map<String, Integer> sorted = sortByValue(chars);
         StringBuilder commonLetters = new StringBuilder();
 
         for (HashMap.Entry<String, Integer> entry : sorted.entrySet()) {
             commonLetters.append(entry.getKey());
         }
-
         return commonLetters.toString().substring(0, 5);
     }
 

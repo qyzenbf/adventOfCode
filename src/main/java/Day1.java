@@ -17,7 +17,7 @@ public class Day1 {
     public static Point visitedTwice = null;
 
     public static void main(String[] args) throws Exception {
-        List<String> instructions ;
+        List<String> instructions;
         String currentFace = NORTH;
         Point initialPoint = new Point(0, 0);
         Point currentPoint = new Point(0, 0);
@@ -43,7 +43,7 @@ public class Day1 {
         return Math.abs(current.y - initial.y) + Math.abs(current.x - initial.x);
     }
 
-    /*Convert file into list of instruction*/
+    /* Convert file into list of instruction */
     public static ArrayList<String> readFile(ArrayList<String> instructions) throws Exception {
         BufferedReader br = new BufferedReader(new FileReader(INPUT_FILE));
         String input;
@@ -83,7 +83,7 @@ public class Day1 {
         return null;
     }
 
-    /*update current point*/
+    /* update current point */
     public static Point move(String direction, int stepNum, Point currentPoint, String currentFace) {
         int moveX = 0;
         int moveY = 0;
@@ -115,7 +115,7 @@ public class Day1 {
         return currentPoint;
     }
 
-    /*return whether a point is visited or not*/
+    /* return whether a point is visited or not */
     public static boolean isVisited(Point currentPoint, List<Point> visitedPoints) {
         for (Point visited : visitedPoints) {
             if (visited.x == currentPoint.x && visited.y == currentPoint.y) {
@@ -125,7 +125,7 @@ public class Day1 {
         return false;
     }
 
-    /*add visited points to list when doing a movement*/
+    /* add visited points to list when doing a movement */
     public static void addVisited(Point currentPoint, int moveX, int moveY) {
 
         int currentX = currentPoint.x;
@@ -171,9 +171,5 @@ public class Day1 {
                 }
             }
         }
-
-
     }
-
-
 }
