@@ -1,7 +1,7 @@
 # Advent of Code 2016
 This repository is for the Advent of Code challenge 2016（https://adventofcode.com/2016). It includes Day1, Day4 and Day10. For eachday's challenge, I give my solution as well as unit test cases for each method.
 ## How to Check Output Result
-### - If you have IDE
+### — If you have IDE
 If you have IDE such as `Intellij` or `Eclipse`), you can: 
 
 1. Make sure you have jdk installed. [Here](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A) is how;
