@@ -77,8 +77,8 @@ class Day10Test {
 
         bots.get(2).setInstruction("bot 2 gives low to output 0 and high to output 1");
         Day10.giveChipToBot(2, 1, bots, outputs);
-        assertEquals(1, outputs.get(0));
-        assertEquals(2, outputs.get(1));
+        assertEquals(new Integer(1), outputs.get(0));
+        assertEquals(new Integer(2), outputs.get(1));
 
         bots.put(3, new Bot());
         Day10.giveChipToBot(3, Day10.VAL_LOW, bots, outputs);
@@ -97,8 +97,8 @@ class Day10Test {
         bots.get(1).setHigh(2);
         bots.get(1).setInstruction("bot 1 gives low to output 0 and high to output 1");
         Day10.processInstruction(bots, outputs, bots.get(1));
-        assertEquals(1, outputs.get(0));
-        assertEquals(2, outputs.get(1));
+        assertEquals(new Integer(1), outputs.get(0));
+        assertEquals(new Integer(2), outputs.get(1));
 
         bots.put(2, new Bot());
         bots.put(3, new Bot());
@@ -121,8 +121,8 @@ class Day10Test {
         bots.get(1).setHigh(2);
         bots.get(1).setInstruction("bot 1 gives low to output 0 and high to output 1");
         Day10.startProcess(bots, outputs);
-        assertEquals(1, outputs.get(0));
-        assertEquals(2, outputs.get(1));
+        assertEquals(new Integer(1), outputs.get(0));
+        assertEquals(new Integer(2), outputs.get(1));
     }
 
     @Test

@@ -1,6 +1,6 @@
-import org.junit.Test;
-import org.junit.runner.RunWith;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.awt.*;
@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
 
 
 public class Day1Test {
@@ -22,7 +21,7 @@ public class Day1Test {
             Day1.readFile(new ArrayList<>());
         });
 
-        Day1.INPUT_FILE = "/Users/QYZ/Desktop/adventOfCode/src/main/InputFile/Input_D1";
+        Day1.INPUT_FILE = "src/main/InputFile/Input_D1";
         assertEquals("R1", Day1.readFile(new ArrayList<>()).get(0));
 
     }
@@ -143,7 +142,7 @@ public class Day1Test {
 
     }
 
-    @Test
+   // @Test
     public void testMain() {
         Day1.INPUT_FILE = "NOT/EXIST";
         assertThrows(IOException.class, () -> {
