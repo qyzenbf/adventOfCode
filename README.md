@@ -11,7 +11,7 @@ If you have IDE such as `Intellij` or `Eclipse`), you can:
   ```shell script
   git clone github.com/qyzenbf/adventOfCode
   ```
-4. Open project using IDE. Find test cases in directory `src`&#8594;`test`&#8594;`java`
+4. Open project using IDE. Find test cases in directory `src`&#8594;`test`&#8594;`java` and run it.
 
 ### — If you don't run code in IDE
 
