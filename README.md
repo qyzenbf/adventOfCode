@@ -34,8 +34,18 @@ If you have IDE such as `Intellij` or `Eclipse`), you can:
   ```shell script
   git clone github.com/qyzenbf/adventOfCode
   ```
-4. Open project using IDE. Find test cases in directory `src`&#8594;`test`&#8594;`java` and run it.
+4. Open project using IDE. Find test cases in directory `src`&#8594;`test`&#8594;`java` and run it. Each test is written and can be run in method level.
 
 ### — If you don't run code in IDE
 
 1. Make sure your computer have maven building tool. Find it [here](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html);
+2. Make sure you have jdk installed. [Here](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A) is how;
+3. Go to the project file by commend:
+```shell script
+  cd adventOfCode
+  ```
+4. Run the commend below to see the result of test cases: 
+```shell script
+ mvn clean install
+```
+
