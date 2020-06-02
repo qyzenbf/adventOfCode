@@ -48,15 +48,16 @@ class Day4Test {
         //kloqemlib-lygbzq-pqloxdb-991[lbqod]
         String name_northPole = "kloqemliblygbzqpqloxdb";
         String sector_northPole = "991";
-        assertEquals(991,Day4.checkNorthPole(name_northPole,sector_northPole));
-        assertEquals(0,Day4.checkNorthPole("abcdefgh","123"));
+        assertEquals(991, Day4.checkNorthPole(name_northPole, sector_northPole));
+        assertEquals(0, Day4.checkNorthPole("abcdefgh", "123"));
     }
 
     @Test
-    void testReadFile(){
+    void testReadFile() {
         Day4.INPUT_FILE = "NOT/EXIST";
         assertThrows(IOException.class, () -> {
             Day4.main(null);
         });
     }
+
 }

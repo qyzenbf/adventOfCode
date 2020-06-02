@@ -3,13 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="09203af7-2feb-4cce-86ee-4d256e11f92e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Day1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Day1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Day10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Day10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Day4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Day4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Day4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Day4Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Day1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Day1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Day10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Day10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/adventOfCode-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Day4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Day4$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Day4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Day4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Day1Test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Day1Test.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="128" />
+    <option name="myElementSize" value="134" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -112,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591018980843</updated>
       <workItem from="1591018988316" duration="819000" />
-      <workItem from="1591019871870" duration="12565000" />
+      <workItem from="1591019871870" duration="13055000" />
     </task>
     <servers />
   </component>
@@ -124,31 +128,31 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="535" y="280" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.768@0.0.1366.768" timestamp="1591023372423" />
-    <state width="1324" height="171" key="GridCell.Tab.0.bottom" timestamp="1591056500613">
+    <state width="1324" height="171" key="GridCell.Tab.0.bottom" timestamp="1591060794665">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1591056500613" />
-    <state width="1324" height="171" key="GridCell.Tab.0.center" timestamp="1591056500608">
+    <state width="1324" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1591060794665" />
+    <state width="1324" height="171" key="GridCell.Tab.0.center" timestamp="1591060794662">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1591056500608" />
-    <state width="1324" height="171" key="GridCell.Tab.0.left" timestamp="1591056500605">
+    <state width="1324" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1591060794662" />
+    <state width="1324" height="171" key="GridCell.Tab.0.left" timestamp="1591060794661">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1591056500605" />
-    <state width="1324" height="171" key="GridCell.Tab.0.right" timestamp="1591056500612">
+    <state width="1324" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1591060794661" />
+    <state width="1324" height="171" key="GridCell.Tab.0.right" timestamp="1591060794663">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1591056500612" />
+    <state width="1324" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1591060794663" />
     <state x="376" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1591018993393">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="376" y="216" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1591018993393" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/adventOfCode$Day1Test.ic" NAME="Day1Test Coverage Results" MODIFIED="1591054106851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/adventOfCode$Day1Test.ic" NAME="Day1Test Coverage Results" MODIFIED="1591060733283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/adventOfCode$Day4Test_testSortByValue.ic" NAME="Day4Test.testSortByValue Coverage Results" MODIFIED="1591039707153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/adventOfCode$Day10Test.ic" NAME="Day10Test Coverage Results" MODIFIED="1591055495951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/adventOfCode$Day4Test.ic" NAME="Day4Test Coverage Results" MODIFIED="1591056500491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/adventOfCode$Day10Test.ic" NAME="Day10Test Coverage Results" MODIFIED="1591060771811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/adventOfCode$Day4Test.ic" NAME="Day4Test Coverage Results" MODIFIED="1591060661109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
