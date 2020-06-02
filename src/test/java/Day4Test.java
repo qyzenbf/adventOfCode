@@ -1,15 +1,15 @@
-import org.junit.jupiter.api.Test;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class Day4Test {
+public class Day4Test {
     @Test
-    void testSortByValue() {
+    public void testSortByValue() {
         HashMap<String, Integer> map = new HashMap<>();
         map.put("b", 1);
         map.put("a", 1);
@@ -24,7 +24,7 @@ class Day4Test {
     }
 
     @Test
-    void testCommonChars() {
+    public void testCommonChars() {
         HashMap<String, Integer> map = new HashMap<>();
         map.put("a", 1);
         map.put("b", 1);
@@ -35,17 +35,17 @@ class Day4Test {
     }
 
     @Test
-    void testStoreChars() {
+    public void testStoreChars() {
         HashMap<String, Integer> map = new HashMap<>();
         String name = "aab";
         Day4.storeChars(name, map);
-        assertEquals(1, map.get("b"));
-        assertEquals(2, map.get("a"));
+        assertEquals(new Integer(1), map.get("b"));
+        assertEquals(new Integer(2), map.get("a"));
     }
 
     @Test
-    void testCheckNorthPole() {
-        //kloqemlib-lygbzq-pqloxdb-991[lbqod]
+    public void testCheckNorthPole() {
+
         String name_northPole = "kloqemliblygbzqpqloxdb";
         String sector_northPole = "991";
         assertEquals(991, Day4.checkNorthPole(name_northPole, sector_northPole));
@@ -53,7 +53,7 @@ class Day4Test {
     }
 
     @Test
-    void testReadFile() {
+    public void testReadFile() {
         Day4.INPUT_FILE = "NOT/EXIST";
         assertThrows(IOException.class, () -> {
             Day4.main(null);
