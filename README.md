@@ -19,10 +19,11 @@ If you have IDE such as `Intellij` or `Eclipse`), you can:
 ```shell script
   cd adventOfCode
   ```
-4. For each day's challenge run the commend as below, change from `Day1`,`Day4` and `Day10` to see each output result.
+4. For each day's challenge run the commend as below: 
 ```shell script
 java -cp target/adventOfCode-1.0-SNAPSHOT.jar Day1
 ```
+change from `Day1`,`Day4` and `Day10` to see each output result.
 ## How to Run Test Cases
 ### — If you have IDE 
 If you have IDE such as `Intellij` or `Eclipse`), you can: 
